@@ -1,1 +1,67 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>ILIA Prototype</title></head><body><h1>Loading...</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>ILIA Prototype — NIW / Simplicity Group</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:"Roboto",sans-serif;background:#F3F3FA;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;}
+    .logo{font-size:32px;font-weight:700;color:#2A62E4;letter-spacing:1px;margin-bottom:8px;}
+    .sub{font-size:15px;color:#565E71;margin-bottom:48px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;width:100%;max-width:900px;}
+    .card{background:#fff;border:1px solid #C4C6D0;border-radius:16px;padding:28px 24px;text-decoration:none;color:#1A1B1F;transition:box-shadow 0.15s,transform 0.15s;display:flex;flex-direction:column;gap:10px;}
+    .card:hover{box-shadow:0 4px 20px rgba(42,98,228,0.12);transform:translateY(-2px);}
+    .card-icon{font-size:28px;}
+    .card-title{font-size:16px;font-weight:500;color:#1A1B1F;}
+    .card-desc{font-size:13px;color:#565E71;line-height:1.5;}
+    .badge{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;background:#DBE1FF;color:#001257;width:fit-content;}
+    .footer{margin-top:40px;font-size:12px;color:#74777F;}
+  </style>
+</head>
+<body>
+  <div class="logo">ILIA</div>
+  <div class="sub">UI Prototype · NIW Companies / Simplicity Group · Design Kit v1.0</div>
+  <div class="grid">
+    <a class="card" href="screens/dashboard.html">
+      <span class="card-icon">🏠</span>
+      <div class="card-title">Dashboard</div>
+      <div class="card-desc">Main user dashboard with stats, recent cases, and nav rail.</div>
+      <span class="badge">Ready</span>
+    </a>
+    <a class="card" href="screens/enrollment.html">
+      <span class="card-icon">📋</span>
+      <div class="card-title">New Enrollment</div>
+      <div class="card-desc">5-step enrollment wizard — insured info, product, trust setup.</div>
+      <span class="badge">Ready</span>
+    </a>
+    <a class="card" href="screens/policy-detail.html">
+      <span class="card-icon">📄</span>
+      <div class="card-title">Policy Detail</div>
+      <div class="card-desc">Policy overview, benefit illustration, key parties, tabs.</div>
+      <span class="badge">Ready</span>
+    </a>
+    <a class="card" href="screens/agent-portal.html">
+      <span class="card-icon">👤</span>
+      <div class="card-title">Agent Portal</div>
+      <div class="card-desc">Agent book of business, action items, client management.</div>
+      <span class="badge">Ready</span>
+    </a>
+    <a class="card" href="screens/trustee.html">
+      <span class="card-icon">🏦</span>
+      <div class="card-title">Trustee View</div>
+      <div class="card-desc">NIW Trust Services dashboard — tranches, signatures, audit.</div>
+      <span class="badge">Ready</span>
+    </a>
+    <a class="card" href="design-guide.html">
+      <span class="card-icon">🎨</span>
+      <div class="card-title">Design Guide</div>
+      <div class="card-desc">ILIA color palette, typography, MD3 components reference.</div>
+      <span class="badge" style="background:#A7F4BC;color:#00210E;">Reference</span>
+    </a>
+  </div>
+  <div class="footer">Prototype only — not production code &nbsp;·&nbsp; Last updated: <span id="ts"></span></div>
+  <script>document.getElementById("ts").textContent=new Date().toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});</script>
+</body>
+</html>
